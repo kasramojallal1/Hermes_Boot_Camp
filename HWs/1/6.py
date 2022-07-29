@@ -13,8 +13,8 @@ def content_validity(my_input):
 
 def sender_validity(my_input):
     
-    for value in my_input:
-        if value.isalpha():
+    for char in my_input:
+        if char.isalpha():
             return True
         
     return False
@@ -25,7 +25,6 @@ if __name__ == '__main__':
 
     sender = input("ID:")
     content = input("content:")
-
 
     if sender_validity(sender) and content_validity(content):
         print("Not spam")
